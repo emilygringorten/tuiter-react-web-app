@@ -1,0 +1,100 @@
+.wd-bg-color-black {
+    background-color:black;
+}
+
+.wd-search-bar {
+    background-color: #3a3a3a;
+    border: 0px;
+    border-radius: 50px;
+    color: white;
+    width: 400px;
+    padding: 8px;
+    margin-left: 15px;
+
+}
+
+.wd-gear-icon {
+    padding-left: 12px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    top: 7px;
+    position: relative;
+}
+
+.wd-grid-row {
+    clear: both;
+    display: flex;
+}
+
+.wd-align-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-explore-link-highlighted {
+    color: rgb(29, 161, 242);
+    font-size: 15px;
+    padding: 16px;
+    text-decoration: solid underline rgb(29, 161, 242) 3px;
+    text-underline-offset: 9px;
+}
+
+.wd-explore-link {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.wd-explore-topic {
+    color: rgb(110, 118, 125);
+    font-size: 13px;
+}
+
+.wd-headline {
+    color: white;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.wd-explore-cell {
+    border-color: rgb(47, 51, 54);
+    border-width: 0.9px;
+    width: 100%;
+    border-style: solid;
+}
+
+.wd-grid-cell-image {
+    width: 30%;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.wd-grid-cell-content {
+    width: 70%;
+    float: left;
+}
+
+.wd-explore-cell-image {
+    border-radius: 10px;
+    margin-right: 16px;
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.wd-small-profile-icon {
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    padding: 5px;
+    position: relative;
+    top: 8px;
+}
+
+.wd-profile-text {
+    color: white;
+    font-size: 13px;
+}

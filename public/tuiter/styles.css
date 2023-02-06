@@ -1,0 +1,32 @@
+.wd-header {
+    color: white;
+    font-size: 20px;
+    padding-left: 16px;
+    padding-top: 12px;
+}
+
+.wd-gray-text {
+    color: lightgray;
+    font-size: 13px;
+}
+
+.wd-bg-color-black {
+    background-color:black;
+}
+
+.wd-cell {
+    border-color: rgb(47, 51, 54);
+    border-width: 0.9px;
+    width: 100%;
+    border-style: solid;
+}
+
+.wd-image-column {
+    width: 10%;
+    float: left;
+}
+
+.wd-tuit-text-column {
+    width: 90%;
+    float: left;
+}
