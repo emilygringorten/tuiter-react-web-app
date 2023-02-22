@@ -2,8 +2,8 @@
 const NavigationSidebar = () => {
     return (`
     <ul class="list-group pt-3 d-none d-lg-none d-xl-block d-xxl-block">
-      <li class="list-group-item"><i class="p-1 fab fa-twitter"></i></li>
-      <li class="list-group-item"><i class="p-1 fa fa-home"></i>Home</li>
+      <li class="list-group-item"><i class="p-1 fab fa-twitter pe-2"></i></li>
+      <li class="list-group-item"><i class=" pt-1 fa-solid fa-house"></i>Home</li>
       <li class="list-group-item active"><i class="p-1 fa fa-hashtag"></i>Explore</li>
       <li class="list-group-item"><i class="p-1 fa fa-bell"></i>Notifications</li>
       <li class="list-group-item"><i class="p-1 fa fa-envelope"></i>Messages</li>
