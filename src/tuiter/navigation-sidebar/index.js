@@ -9,12 +9,12 @@ const NavigationSidebar = (
         <div>
             <div className="list-group pt-3 d-none d-lg-none d-xl-block d-xxl-block">
                 <a className="list-group-item"><i className="fa-brands fa-twitter pe-2"></i></a>
-                <a className={`list-group-item
+                <a href="/tuiter" className={`list-group-item
                     ${active === 'home'?'active':''}`}>
                     <i className="fa-solid fa-house pe-2"></i>
                     Home
                 </a>
-                <a className={`list-group-item
+                <a href="/tuiter/explore" className={`list-group-item
                     ${active === 'explore'?'active':''}`}>
                     <i className="fa-solid fa-hashtag pe-2"></i>
                     Explore
@@ -52,11 +52,11 @@ const NavigationSidebar = (
             </div>
             <div className="list-group pt-3 d-block d-lg-block d-xl-none">
                 <a className="list-group-item"><i className="fa-brands fa-twitter pe-2"></i></a>
-                <a className={`list-group-item
+                <a href="/tuiter" className={`list-group-item
                     ${active === 'home'?'active':''}`}>
                     <i className="fa-solid fa-house pe-2"></i>
                 </a>
-                <a className={`list-group-item
+                <a href="/tuiter/explore" className={`list-group-item
                     ${active === 'explore'?'active':''}`}>
                     <i className="fa-solid fa-hashtag pe-2"></i>
                 </a>
