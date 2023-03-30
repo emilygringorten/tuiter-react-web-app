@@ -1,6 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {updateTuitThunk}
+    from "../../services/tuits-thunks";
+import {useDispatch, useSelector} from "react-redux";
 
 const TuitStats = (tuit) => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(updateTuitThunk());
+    }, [])
     return(
         <div className="row">
             <div className="col-3 row">
@@ -20,12 +27,27 @@ const TuitStats = (tuit) => {
                 </div>
             </div>
             <div className="col-3 row">
-                <div className="col-6 float-end">
-                    <i className="fa-solid fa-heart pe-2"></i>
-                </div>
                 <div className="col-6 float-start p-0">
+                    {/*<button onClick={() => console.log('test')}*/}
+                    {/*   className="bi bi-heart-fill me-2 text-danger"/>*/}
+                    { console.log(tuit.tuits.likes) }
+                    <button onClick={() => dispatch(updateTuitThunk({
+                        ...tuit,
+                        likes: tuit.tuits.likes + 1
+                    }))} className="bi bi-heart-fill me-2 text-danger"></button>
+                    { console.log(tuit.tuits.likes) }
+                </div>
+                <div className="col-6 float-end">
                     {tuit.tuits.likes}
                 </div>
+                {/* DISLIKES????? */}
+                {/*    Link to*/}
+                {/*    const updates = {*/}
+                {/*    ...post,*/}
+                {/*    likes: post.likes + 1,*/}
+                {/*    liked: true*/}
+                {/*};*/}
+                {/*    dispatch(updateTuitThunk(updates));*/}
             </div>
             <div className="col-3 row">
                 <div className="col-3 row">

@@ -2,8 +2,7 @@ import React from "react";
 import TuitStats
     from "./tuit-stats";
 import {useDispatch} from "react-redux";
-import {deleteTuit} from "../reducers/tuits-reducer"
-
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 
 const TuitItem = (
     {
@@ -13,7 +12,7 @@ const TuitItem = (
             "userName": "SpaceX",
             "time": "2h",
             "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
-            "image": "spacex.png",
+            "image": "spacex.jpeg",
             "liked": true,
             "replies": 123,
             "retuits": 432,
@@ -25,20 +24,20 @@ const TuitItem = (
 ) => {
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     }
     return(
         <li className="list-group-item">
             <div className="row">
                 <div className="col-10">
-                    <div>{tuit.userName} <i className="fa-solid fa-check"></i>{tuit.handle} {tuit.time}</div>
+                    <div><span className="fw-bold">{tuit.username}</span> <i className="fa-solid fa-check"></i>{tuit.handle} {tuit.time}
+                        <i className="bi bi-x-lg float-end"
+                           onClick={() => deleteTuitHandler(tuit._id)}></i></div>
                     <div>{tuit.tuit}</div>
                 </div>
                 <div className="col-2">
                     <img width={70} className="float-end rounded-3" src={`/images/${tuit.image}`}/>
                 </div>
-                <i className="bi bi-x-lg float-end"
-                   onClick={() => deleteTuitHandler(tuit._id)}></i>
             </div>
             <TuitStats tuits={tuit}/>
         </li>
