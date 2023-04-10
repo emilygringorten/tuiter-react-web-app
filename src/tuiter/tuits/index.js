@@ -26,14 +26,6 @@ const TuitList = () => {
                     />
                 )
             }
-            {/*{*/}
-            {/*    tuits.map(tuit =>*/}
-            {/*        <TuitStats*/}
-            {/*            key={tuit._id}*/}
-            {/*            tuit={tuit}*/}
-            {/*        />*/}
-            {/*    )*/}
-            {/*}*/}
         </ul>
     );
 };
