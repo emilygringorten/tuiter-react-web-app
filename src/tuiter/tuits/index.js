@@ -19,10 +19,10 @@ const TuitList = () => {
                 </li>
             }
             {
-                tuits.map(tuit =>
+                Array.isArray(tuits) && tuits.map(tuit =>
                     <TuitItem
                         key={tuit._id}
-                         tuit={tuit}
+                        tuit={tuit}
                     />
                 )
             }
