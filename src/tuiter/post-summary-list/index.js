@@ -18,7 +18,7 @@ const PostSummaryList = () => {
                 </li>
             }
             {
-                tuits.map(tuit =>
+                Array.isArray(tuits) && tuits.map(tuit =>
                     <PostSummaryItem
                         key={tuit._id}
                         post={tuit}
