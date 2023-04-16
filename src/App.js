@@ -13,10 +13,7 @@ function App() {
                            element={<Labs/>}/>
                     <Route path="/hello"
                            element={<index/>}/>
-                    <Route path="/tuiter/explore"
-                           element={<Tuiter/>}/>
-                    <Route path="/tuiter"
-                           element={<Home/>}/>
+                    <Route path="/tuiter/*" element={<Tuiter/>}/>
                     <Route path="/*" element={<Labs/>}/>
                 </Routes>
             </div>

@@ -1,24 +1,24 @@
 import React from "react";
+import {useLocation} from "react-router";
+import {Link} from "react-router-dom";
 
-const NavigationSidebar = (
-    {
-        active = 'explore'
-    }
-) => {
+const NavigationSidebar = () => {
+    const { pathname } = useLocation();
+    const paths = pathname.split('/')
+    const active = paths[2];
     return (
         <div>
             <div className="list-group pt-3 d-none d-lg-none d-xl-block d-xxl-block">
                 <a className="list-group-item"><i className="fa-brands fa-twitter pe-2"></i></a>
-                <a href="/tuiter" className={`list-group-item
-                    ${active === 'home'?'active':''}`}>
+                <Link to="/tuiter/home" className={`list-group-item ${active === 'home' ?'active':''}`}>
                     <i className="fa-solid fa-house pe-2"></i>
                     Home
-                </a>
-                <a href="/tuiter/explore" className={`list-group-item
-                    ${active === 'explore'?'active':''}`}>
+                </Link>
+                <Link to="/tuiter/explorev2" className={`list-group-item
+                    ${active === 'explorev2'?'active':''}`}>
                     <i className="fa-solid fa-hashtag pe-2"></i>
                     Explore
-                </a>
+                </Link>
                 <a className={`list-group-item
                     ${active === 'notifications'?'active':''}`}>
                     <i className="fa-solid fa-bell pe-2"></i>
@@ -52,14 +52,14 @@ const NavigationSidebar = (
             </div>
             <div className="list-group pt-3 d-block d-lg-block d-xl-none">
                 <a className="list-group-item"><i className="fa-brands fa-twitter pe-2"></i></a>
-                <a href="/tuiter" className={`list-group-item
+                <Link to="/tuiter/home" className={`list-group-item
                     ${active === 'home'?'active':''}`}>
                     <i className="fa-solid fa-house pe-2"></i>
-                </a>
-                <a href="/tuiter/explore" className={`list-group-item
-                    ${active === 'explore'?'active':''}`}>
+                </Link>
+                <Link to="/tuiter/explorev2" className={`list-group-item
+                    ${active === 'explorev2'?'active':''}`}>
                     <i className="fa-solid fa-hashtag pe-2"></i>
-                </a>
+                </Link>
                 <a className={`list-group-item
                     ${active === 'notifications'?'active':''}`}>
                     <i className="fa-solid fa-bell pe-2"></i>
